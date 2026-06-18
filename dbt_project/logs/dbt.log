@@ -1,0 +1,1384 @@
+[0m22:13:53.944270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A674C0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A6593770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A612B860>]}
+
+
+============================== 22:13:53.948258 | b0aed839-8af1-41cb-8b51-5a7aa2761cad ==============================
+[0m22:13:53.948258 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:13:53.949277 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project\\logs'}
+[0m22:13:53.970280 [info ] [MainThread]: dbt version: 1.11.11
+[0m22:13:53.971244 [info ] [MainThread]: python version: 3.12.2
+[0m22:13:53.971776 [info ] [MainThread]: python path: C:\Users\ayude\spotify-creator-analytics\venv\Scripts\python.exe
+[0m22:13:53.972781 [info ] [MainThread]: os info: Windows-11-10.0.26200-SP0
+[0m22:13:54.158832 [info ] [MainThread]: Using profiles dir at C:\Users\ayude\spotify-creator-analytics\dbt_project
+[0m22:13:54.158832 [info ] [MainThread]: Using profiles.yml file at C:\Users\ayude\spotify-creator-analytics\dbt_project\profiles.yml
+[0m22:13:54.158832 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\ayude\spotify-creator-analytics\dbt_project\dbt_project.yml
+[0m22:13:54.158832 [info ] [MainThread]: adapter type: duckdb
+[0m22:13:54.158832 [info ] [MainThread]: adapter version: 1.10.1
+[0m22:13:54.311033 [info ] [MainThread]: Configuration:
+[0m22:13:54.312023 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:13:54.312023 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:13:54.313306 [info ] [MainThread]: Required dependencies:
+[0m22:13:54.313306 [debug] [MainThread]: Executing "git --help"
+[0m22:13:54.350849 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:13:54.350849 [debug] [MainThread]: STDERR: "b''"
+[0m22:13:54.350849 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:13:54.350849 [info ] [MainThread]: Connection:
+[0m22:13:54.350849 [info ] [MainThread]:   database: spotify_creator
+[0m22:13:54.350849 [info ] [MainThread]:   schema: main
+[0m22:13:54.350849 [info ] [MainThread]:   path: ../data/spotify_creator.duckdb
+[0m22:13:54.350849 [info ] [MainThread]:   config_options: None
+[0m22:13:54.350849 [info ] [MainThread]:   extensions: None
+[0m22:13:54.350849 [info ] [MainThread]:   settings: {}
+[0m22:13:54.357028 [info ] [MainThread]:   external_root: .
+[0m22:13:54.357028 [info ] [MainThread]:   use_credential_provider: None
+[0m22:13:54.357028 [info ] [MainThread]:   attach: None
+[0m22:13:54.358309 [info ] [MainThread]:   filesystems: None
+[0m22:13:54.358309 [info ] [MainThread]:   remote: None
+[0m22:13:54.358309 [info ] [MainThread]:   plugins: None
+[0m22:13:54.359338 [info ] [MainThread]:   disable_transactions: False
+[0m22:13:54.359338 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:13:54.681222 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m22:13:54.843249 [debug] [MainThread]: Using duckdb connection "debug"
+[0m22:13:54.844251 [debug] [MainThread]: On debug: select 1 as id
+[0m22:13:54.844251 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:13:54.885080 [debug] [MainThread]: SQL status: OK in 0.040 seconds
+[0m22:13:54.885080 [debug] [MainThread]: On debug: Close
+[0m22:13:54.886584 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:13:54.887593 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:13:54.888616 [debug] [MainThread]: Command `dbt debug` succeeded at 22:13:54.887593 after 1.29 seconds
+[0m22:13:54.888616 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m22:13:54.889594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A3042150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A7D9E6F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000213A68561E0>]}
+[0m22:13:54.889594 [debug] [MainThread]: Flushing usage events
+[0m22:13:56.127103 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:14:14.505193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F3E48CE0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F19035C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F1900500>]}
+
+
+============================== 22:14:14.509740 | b5997c71-013b-4166-b8bd-99995c4e8695 ==============================
+[0m22:14:14.509740 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:14:14.510738 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project\\logs'}
+[0m22:14:14.953595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F54A20C0>]}
+[0m22:14:15.038049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F39D57F0>]}
+[0m22:14:15.040151 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:14:15.305579 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m22:14:15.306573 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:14:15.307939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F59D8140>]}
+[0m22:14:16.586808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F5C409E0>]}
+[0m22:14:16.669784 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\manifest.json
+[0m22:14:16.675623 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\semantic_manifest.json
+[0m22:14:16.737216 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F5E4F590>]}
+[0m22:14:16.737216 [info ] [MainThread]: Found 7 models, 485 macros
+[0m22:14:16.738663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F5CC29F0>]}
+[0m22:14:16.740707 [info ] [MainThread]: 
+[0m22:14:16.741725 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:14:16.742718 [info ] [MainThread]: 
+[0m22:14:16.742718 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:14:16.750827 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_spotify_creator'
+[0m22:14:16.851034 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator"
+[0m22:14:16.851034 [debug] [ThreadPool]: On list_spotify_creator: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "list_spotify_creator"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"spotify_creator"'
+    
+  
+  
+[0m22:14:16.851034 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:16.885390 [debug] [ThreadPool]: SQL status: OK in 0.032 seconds
+[0m22:14:16.887927 [debug] [ThreadPool]: On list_spotify_creator: Close
+[0m22:14:16.888932 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_spotify_creator, now create_spotify_creator_main)
+[0m22:14:16.888932 [debug] [ThreadPool]: Creating schema "database: "spotify_creator"
+schema: "main"
+"
+[0m22:14:16.896042 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:14:16.896042 [debug] [ThreadPool]: On create_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "create_spotify_creator_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='spotify_creator'
+        and type='sqlite'
+    
+  
+[0m22:14:16.896945 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:14:16.897991 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m22:14:16.898951 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:14:16.899951 [debug] [ThreadPool]: On create_spotify_creator_main: BEGIN
+[0m22:14:16.899951 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:14:16.899951 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:14:16.900951 [debug] [ThreadPool]: On create_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "create_spotify_creator_main"} */
+
+    
+    
+        create schema if not exists "spotify_creator"."main"
+    
+[0m22:14:16.902166 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:14:16.903251 [debug] [ThreadPool]: On create_spotify_creator_main: COMMIT
+[0m22:14:16.904259 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:14:16.904259 [debug] [ThreadPool]: On create_spotify_creator_main: COMMIT
+[0m22:14:16.904259 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:14:16.905164 [debug] [ThreadPool]: On create_spotify_creator_main: Close
+[0m22:14:16.906669 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_spotify_creator_main'
+[0m22:14:16.911679 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator_main"
+[0m22:14:16.911679 [debug] [ThreadPool]: On list_spotify_creator_main: BEGIN
+[0m22:14:16.912786 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:14:16.913291 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:14:16.913291 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator_main"
+[0m22:14:16.914397 [debug] [ThreadPool]: On list_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "list_spotify_creator_main"} */
+select
+      'spotify_creator' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'spotify_creator'
+  
+[0m22:14:16.923048 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m22:14:16.924049 [debug] [ThreadPool]: On list_spotify_creator_main: ROLLBACK
+[0m22:14:16.925052 [debug] [ThreadPool]: Failed to rollback 'list_spotify_creator_main'
+[0m22:14:16.925052 [debug] [ThreadPool]: On list_spotify_creator_main: Close
+[0m22:14:16.926656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F5CC2C00>]}
+[0m22:14:16.926656 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:14:16.926656 [debug] [MainThread]: On master: BEGIN
+[0m22:14:16.926656 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:14:16.928791 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:14:16.928791 [debug] [MainThread]: On master: COMMIT
+[0m22:14:16.928791 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:14:16.928791 [debug] [MainThread]: On master: COMMIT
+[0m22:14:16.928791 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:14:16.928791 [debug] [MainThread]: On master: Close
+[0m22:14:16.945110 [debug] [Thread-1 (]: Began running node model.spotify_creator_growth.stg_artists
+[0m22:14:16.945110 [debug] [Thread-2 (]: Began running node model.spotify_creator_growth.stg_tracks
+[0m22:14:16.946625 [info ] [Thread-1 (]: 1 of 7 START sql view model main.stg_artists ................................... [RUN]
+[0m22:14:16.946625 [info ] [Thread-2 (]: 2 of 7 START sql view model main.stg_tracks .................................... [RUN]
+[0m22:14:16.948082 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.stg_artists'
+[0m22:14:16.948082 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.stg_tracks'
+[0m22:14:16.949116 [debug] [Thread-1 (]: Began compiling node model.spotify_creator_growth.stg_artists
+[0m22:14:16.949116 [debug] [Thread-2 (]: Began compiling node model.spotify_creator_growth.stg_tracks
+[0m22:14:16.951116 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_creator_growth.stg_artists"
+[0m22:14:16.957866 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_creator_growth.stg_tracks"
+[0m22:14:16.960871 [debug] [Thread-2 (]: Began executing node model.spotify_creator_growth.stg_tracks
+[0m22:14:16.960871 [debug] [Thread-1 (]: Began executing node model.spotify_creator_growth.stg_artists
+[0m22:14:16.991127 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_creator_growth.stg_tracks"
+[0m22:14:16.994121 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_creator_growth.stg_artists"
+[0m22:14:16.996707 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:14:16.996707 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: BEGIN
+[0m22:14:16.997856 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:14:16.998850 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:14:16.998850 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:14:16.999820 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:14:16.999820 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_tracks"} */
+
+  
+  create view "spotify_creator"."main"."stg_tracks__dbt_tmp" as (
+    -- stg_tracks.sql
+-- Cleans and standardizes raw track data
+-- Source: Kaggle Spotify Dataset (586K tracks)
+
+with source as (
+    select * from read_csv_auto('../../data/raw/tracks.csv')
+),
+
+cleaned as (
+    select
+        id                                              as track_id,
+        name                                            as track_name,
+        cast(popularity as integer)                     as popularity,
+        cast(duration_ms as integer)                    as duration_ms,
+        cast(duration_ms as float) / 60000.0            as duration_minutes,
+        cast(explicit as boolean)                       as is_explicit,
+        artists                                         as artists_raw,
+        id_artists                                      as artist_ids_raw,
+
+        -- Release date handling
+        try_cast(release_date as date)                  as release_date,
+        case
+            when length(release_date) = 4
+            then cast(release_date as integer)
+            else year(try_cast(release_date as date))
+        end                                             as release_year,
+
+        -- Audio features
+        cast(danceability as float)                     as danceability,
+        cast(energy as float)                           as energy,
+        cast(key as integer)                            as musical_key,
+        cast(loudness as float)                         as loudness_db,
+        cast(mode as integer)                           as mode,
+        cast(speechiness as float)                      as speechiness,
+        cast(acousticness as float)                     as acousticness,
+        cast(instrumentalness as float)                 as instrumentalness,
+        cast(liveness as float)                         as liveness,
+        cast(valence as float)                          as valence,
+        cast(tempo as float)                            as tempo_bpm,
+        cast(time_signature as integer)                 as time_signature,
+
+        -- Derived audio feature categories
+        case
+            when cast(energy as float) >= 0.7 then 'High Energy'
+            when cast(energy as float) >= 0.4 then 'Medium Energy'
+            else 'Low Energy'
+        end                                             as energy_category,
+
+        case
+            when cast(danceability as float) >= 0.7 then 'High Danceability'
+            when cast(danceability as float) >= 0.4 then 'Medium Danceability'
+            else 'Low Danceability'
+        end                                             as danceability_category,
+
+        case
+            when cast(valence as float) >= 0.6 then 'Positive/Happy'
+            when cast(valence as float) >= 0.3 then 'Neutral'
+            else 'Negative/Sad'
+        end                                             as mood_category,
+
+        case
+            when cast(acousticness as float) >= 0.6 then 'Acoustic'
+            else 'Electronic/Produced'
+        end                                             as production_style
+
+    from source
+    where id is not null
+      and name is not null
+      and cast(popularity as integer) between 0 and 100
+      and cast(danceability as float) between 0 and 1
+      and cast(energy as float) between 0 and 1
+)
+
+select * from cleaned
+where release_year >= 1950
+  and duration_minutes between 0.5 and 20  -- Filter out invalid durations
+  );
+
+[0m22:14:16.999820 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: BEGIN
+[0m22:14:17.003910 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:14:17.004920 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m22:14:17.004920 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:14:17.005919 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_artists"} */
+
+  
+  create view "spotify_creator"."main"."stg_artists__dbt_tmp" as (
+    -- stg_artists.sql
+-- Cleans and standardizes raw artist data
+-- Source: Kaggle Spotify Dataset (1.16M artists)
+
+with source as (
+    select * from read_csv_auto('../../data/raw/artists.csv')
+),
+
+cleaned as (
+    select
+        id                                              as artist_id,
+        name                                            as artist_name,
+        cast(followers as bigint)                       as followers,
+        cast(popularity as integer)                     as popularity,
+        genres                                          as genres_raw,
+
+        -- Data quality flags
+        case
+            when followers is null then true
+            when followers < 0 then true
+            else false
+        end                                             as is_invalid_followers,
+
+        case
+            when popularity < 0 or popularity > 100 then true
+            else false
+        end                                             as is_invalid_popularity
+
+    from source
+    where id is not null
+      and name is not null
+      and name != ''
+)
+
+select * from cleaned
+where not is_invalid_followers
+  and not is_invalid_popularity
+  );
+
+[0m22:14:17.009951 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: IO Error: No files found that match the pattern "../../data/raw/artists.csv"
+
+LINE 10:     select * from read_csv_auto('../../data/raw/artists.csv')
+                           ^
+[0m22:14:17.009951 [debug] [Thread-2 (]: DuckDB adapter: duckdb error: IO Error: No files found that match the pattern "../../data/raw/tracks.csv"
+
+LINE 10:     select * from read_csv_auto('../../data/raw/tracks.csv')
+                           ^
+[0m22:14:17.010953 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_artists"} */
+
+  
+  create view "spotify_creator"."main"."stg_artists__dbt_tmp" as (
+    -- stg_artists.sql
+-- Cleans and standardizes raw artist data
+-- Source: Kaggle Spotify Dataset (1.16M artists)
+
+with source as (
+    select * from read_csv_auto('../../data/raw/artists.csv')
+),
+
+cleaned as (
+    select
+        id                                              as artist_id,
+        name                                            as artist_name,
+        cast(followers as bigint)                       as followers,
+        cast(popularity as integer)                     as popularity,
+        genres                                          as genres_raw,
+
+        -- Data quality flags
+        case
+            when followers is null then true
+            when followers < 0 then true
+            else false
+        end                                             as is_invalid_followers,
+
+        case
+            when popularity < 0 or popularity > 100 then true
+            else false
+        end                                             as is_invalid_popularity
+
+    from source
+    where id is not null
+      and name is not null
+      and name != ''
+)
+
+select * from cleaned
+where not is_invalid_followers
+  and not is_invalid_popularity
+  );
+
+[0m22:14:17.010953 [debug] [Thread-2 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_tracks"} */
+
+  
+  create view "spotify_creator"."main"."stg_tracks__dbt_tmp" as (
+    -- stg_tracks.sql
+-- Cleans and standardizes raw track data
+-- Source: Kaggle Spotify Dataset (586K tracks)
+
+with source as (
+    select * from read_csv_auto('../../data/raw/tracks.csv')
+),
+
+cleaned as (
+    select
+        id                                              as track_id,
+        name                                            as track_name,
+        cast(popularity as integer)                     as popularity,
+        cast(duration_ms as integer)                    as duration_ms,
+        cast(duration_ms as float) / 60000.0            as duration_minutes,
+        cast(explicit as boolean)                       as is_explicit,
+        artists                                         as artists_raw,
+        id_artists                                      as artist_ids_raw,
+
+        -- Release date handling
+        try_cast(release_date as date)                  as release_date,
+        case
+            when length(release_date) = 4
+            then cast(release_date as integer)
+            else year(try_cast(release_date as date))
+        end                                             as release_year,
+
+        -- Audio features
+        cast(danceability as float)                     as danceability,
+        cast(energy as float)                           as energy,
+        cast(key as integer)                            as musical_key,
+        cast(loudness as float)                         as loudness_db,
+        cast(mode as integer)                           as mode,
+        cast(speechiness as float)                      as speechiness,
+        cast(acousticness as float)                     as acousticness,
+        cast(instrumentalness as float)                 as instrumentalness,
+        cast(liveness as float)                         as liveness,
+        cast(valence as float)                          as valence,
+        cast(tempo as float)                            as tempo_bpm,
+        cast(time_signature as integer)                 as time_signature,
+
+        -- Derived audio feature categories
+        case
+            when cast(energy as float) >= 0.7 then 'High Energy'
+            when cast(energy as float) >= 0.4 then 'Medium Energy'
+            else 'Low Energy'
+        end                                             as energy_category,
+
+        case
+            when cast(danceability as float) >= 0.7 then 'High Danceability'
+            when cast(danceability as float) >= 0.4 then 'Medium Danceability'
+            else 'Low Danceability'
+        end                                             as danceability_category,
+
+        case
+            when cast(valence as float) >= 0.6 then 'Positive/Happy'
+            when cast(valence as float) >= 0.3 then 'Neutral'
+            else 'Negative/Sad'
+        end                                             as mood_category,
+
+        case
+            when cast(acousticness as float) >= 0.6 then 'Acoustic'
+            else 'Electronic/Produced'
+        end                                             as production_style
+
+    from source
+    where id is not null
+      and name is not null
+      and cast(popularity as integer) between 0 and 100
+      and cast(danceability as float) between 0 and 1
+      and cast(energy as float) between 0 and 1
+)
+
+select * from cleaned
+where release_year >= 1950
+  and duration_minutes between 0.5 and 20  -- Filter out invalid durations
+  );
+
+[0m22:14:17.011949 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m22:14:17.011949 [debug] [Thread-2 (]: DuckDB adapter: Rolling back transaction.
+[0m22:14:17.012950 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: ROLLBACK
+[0m22:14:17.012950 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: ROLLBACK
+[0m22:14:17.015949 [debug] [Thread-2 (]: Failed to rollback 'model.spotify_creator_growth.stg_tracks'
+[0m22:14:17.016990 [debug] [Thread-1 (]: Failed to rollback 'model.spotify_creator_growth.stg_artists'
+[0m22:14:17.016990 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: Close
+[0m22:14:17.018038 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: Close
+[0m22:14:17.026843 [debug] [Thread-2 (]: Runtime Error in model stg_tracks (models\staging\stg_tracks.sql)
+  IO Error: No files found that match the pattern "../../data/raw/tracks.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/tracks.csv')
+                             ^
+[0m22:14:17.036650 [debug] [Thread-1 (]: Runtime Error in model stg_artists (models\staging\stg_artists.sql)
+  IO Error: No files found that match the pattern "../../data/raw/artists.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/artists.csv')
+                             ^
+[0m22:14:17.039814 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F372C2F0>]}
+[0m22:14:17.039814 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b5997c71-013b-4166-b8bd-99995c4e8695', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F6207770>]}
+[0m22:14:17.040821 [error] [Thread-2 (]: 2 of 7 ERROR creating sql view model main.stg_tracks ........................... [[31mERROR[0m in 0.08s]
+[0m22:14:17.041816 [error] [Thread-1 (]: 1 of 7 ERROR creating sql view model main.stg_artists .......................... [[31mERROR[0m in 0.09s]
+[0m22:14:17.042824 [debug] [Thread-2 (]: Finished running node model.spotify_creator_growth.stg_tracks
+[0m22:14:17.042824 [debug] [Thread-1 (]: Finished running node model.spotify_creator_growth.stg_artists
+[0m22:14:17.043827 [debug] [Thread-7 (]: Marking all children of 'model.spotify_creator_growth.stg_tracks' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_tracks (models\staging\stg_tracks.sql)
+  IO Error: No files found that match the pattern "../../data/raw/tracks.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/tracks.csv')
+                             ^.
+[0m22:14:17.044828 [debug] [Thread-7 (]: Marking all children of 'model.spotify_creator_growth.stg_artists' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_artists (models\staging\stg_artists.sql)
+  IO Error: No files found that match the pattern "../../data/raw/artists.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/artists.csv')
+                             ^.
+[0m22:14:17.044828 [debug] [Thread-4 (]: Began running node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:14:17.045821 [debug] [Thread-2 (]: Began running node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:14:17.045821 [info ] [Thread-4 (]: 3 of 7 SKIP relation main.mart_audio_feature_trends ............................ [[33mSKIP[0m]
+[0m22:14:17.046819 [info ] [Thread-2 (]: 4 of 7 SKIP relation main.int_artist_genre_classification ...................... [[33mSKIP[0m]
+[0m22:14:17.047328 [debug] [Thread-4 (]: Finished running node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:14:17.047328 [debug] [Thread-2 (]: Finished running node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:14:17.048361 [debug] [Thread-3 (]: Began running node model.spotify_creator_growth.int_creator_health_score
+[0m22:14:17.049337 [info ] [Thread-3 (]: 5 of 7 SKIP relation main.int_creator_health_score ............................. [[33mSKIP[0m]
+[0m22:14:17.049337 [debug] [Thread-3 (]: Finished running node model.spotify_creator_growth.int_creator_health_score
+[0m22:14:17.050338 [debug] [Thread-4 (]: Began running node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:14:17.051336 [info ] [Thread-4 (]: 6 of 7 SKIP relation main.mart_artist_growth_tiers ............................. [[33mSKIP[0m]
+[0m22:14:17.051336 [debug] [Thread-4 (]: Finished running node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:14:17.051336 [debug] [Thread-1 (]: Began running node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:14:17.051336 [info ] [Thread-1 (]: 7 of 7 SKIP relation main.mart_genre_breakout_signals .......................... [[33mSKIP[0m]
+[0m22:14:17.051336 [debug] [Thread-1 (]: Finished running node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:14:17.051336 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:14:17.051336 [debug] [MainThread]: On master: BEGIN
+[0m22:14:17.051336 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:14:17.051336 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:14:17.051336 [debug] [MainThread]: On master: COMMIT
+[0m22:14:17.051336 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:14:17.056765 [debug] [MainThread]: On master: COMMIT
+[0m22:14:17.056765 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:14:17.056765 [debug] [MainThread]: On master: Close
+[0m22:14:17.058030 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:14:17.058030 [debug] [MainThread]: Connection 'create_spotify_creator_main' was properly closed.
+[0m22:14:17.058030 [debug] [MainThread]: Connection 'list_spotify_creator_main' was properly closed.
+[0m22:14:17.059026 [debug] [MainThread]: Connection 'model.spotify_creator_growth.stg_artists' was properly closed.
+[0m22:14:17.059026 [debug] [MainThread]: Connection 'model.spotify_creator_growth.stg_tracks' was properly closed.
+[0m22:14:17.059026 [info ] [MainThread]: 
+[0m22:14:17.059998 [info ] [MainThread]: Finished running 3 table models, 4 view models in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m22:14:17.061037 [debug] [MainThread]: Command end result
+[0m22:14:17.087537 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\manifest.json
+[0m22:14:17.090566 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\semantic_manifest.json
+[0m22:14:17.098749 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\run_results.json
+[0m22:14:17.099753 [info ] [MainThread]: 
+[0m22:14:17.100748 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m22:14:17.101848 [info ] [MainThread]: 
+[0m22:14:17.101848 [error] [MainThread]: [31mFailure in model stg_tracks (models\staging\stg_tracks.sql)[0m
+[0m22:14:17.102855 [error] [MainThread]:   Runtime Error in model stg_tracks (models\staging\stg_tracks.sql)
+  IO Error: No files found that match the pattern "../../data/raw/tracks.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/tracks.csv')
+                             ^
+[0m22:14:17.102855 [info ] [MainThread]: 
+[0m22:14:17.102855 [info ] [MainThread]:   compiled code at target\compiled\spotify_creator_growth\models\staging\stg_tracks.sql
+[0m22:14:17.103856 [info ] [MainThread]: 
+[0m22:14:17.103856 [error] [MainThread]: [31mFailure in model stg_artists (models\staging\stg_artists.sql)[0m
+[0m22:14:17.104862 [error] [MainThread]:   Runtime Error in model stg_artists (models\staging\stg_artists.sql)
+  IO Error: No files found that match the pattern "../../data/raw/artists.csv"
+  
+  LINE 10:     select * from read_csv_auto('../../data/raw/artists.csv')
+                             ^
+[0m22:14:17.104862 [info ] [MainThread]: 
+[0m22:14:17.105859 [info ] [MainThread]:   compiled code at target\compiled\spotify_creator_growth\models\staging\stg_artists.sql
+[0m22:14:17.105859 [info ] [MainThread]: 
+[0m22:14:17.106862 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=2 SKIP=5 NO-OP=0 TOTAL=7
+[0m22:14:17.107953 [debug] [MainThread]: Command `dbt run` failed at 22:14:17.107953 after 2.88 seconds
+[0m22:14:17.107953 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F5E02960>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F542F680>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000235F2B07E30>]}
+[0m22:14:17.108956 [debug] [MainThread]: Flushing usage events
+[0m22:14:17.768499 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:17:28.275667 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DE141580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DDC3FC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DDC3DCA0>]}
+
+
+============================== 22:17:28.280243 | a6725e68-8cec-4449-a593-d1b01ffc4b33 ==============================
+[0m22:17:28.280243 [info ] [MainThread]: Running with dbt=1.11.11
+[0m22:17:28.280243 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\ayude\\spotify-creator-analytics\\dbt_project\\logs'}
+[0m22:17:28.605114 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DF6D4410>]}
+[0m22:17:28.685335 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DD857BC0>]}
+[0m22:17:28.688823 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m22:17:28.947075 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m22:17:29.067932 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m22:17:29.068917 [debug] [MainThread]: Partial parsing: updated file: spotify_creator_growth://models\staging\stg_tracks.sql
+[0m22:17:29.068917 [debug] [MainThread]: Partial parsing: updated file: spotify_creator_growth://models\staging\stg_artists.sql
+[0m22:17:29.370647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DF759E20>]}
+[0m22:17:29.442058 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\manifest.json
+[0m22:17:29.445136 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\semantic_manifest.json
+[0m22:17:29.460737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DFDC0590>]}
+[0m22:17:29.461590 [info ] [MainThread]: Found 7 models, 485 macros
+[0m22:17:29.462597 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DB77E000>]}
+[0m22:17:29.464685 [info ] [MainThread]: 
+[0m22:17:29.464685 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:17:29.465703 [info ] [MainThread]: 
+[0m22:17:29.465703 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m22:17:29.473730 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_spotify_creator'
+[0m22:17:29.608041 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator"
+[0m22:17:29.609038 [debug] [ThreadPool]: On list_spotify_creator: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "list_spotify_creator"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"spotify_creator"'
+    
+  
+  
+[0m22:17:29.609038 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:17:29.627246 [debug] [ThreadPool]: SQL status: OK in 0.021 seconds
+[0m22:17:29.627246 [debug] [ThreadPool]: On list_spotify_creator: Close
+[0m22:17:29.627246 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_spotify_creator, now create_spotify_creator_main)
+[0m22:17:29.627246 [debug] [ThreadPool]: Creating schema "database: "spotify_creator"
+schema: "main"
+"
+[0m22:17:29.638376 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:17:29.639377 [debug] [ThreadPool]: On create_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "create_spotify_creator_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='spotify_creator'
+        and type='sqlite'
+    
+  
+[0m22:17:29.639377 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:17:29.640379 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:17:29.642378 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:17:29.642378 [debug] [ThreadPool]: On create_spotify_creator_main: BEGIN
+[0m22:17:29.642378 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:17:29.643421 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:17:29.643421 [debug] [ThreadPool]: On create_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "create_spotify_creator_main"} */
+
+    
+    
+        create schema if not exists "spotify_creator"."main"
+    
+[0m22:17:29.643421 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:17:29.644375 [debug] [ThreadPool]: On create_spotify_creator_main: COMMIT
+[0m22:17:29.644375 [debug] [ThreadPool]: Using duckdb connection "create_spotify_creator_main"
+[0m22:17:29.645472 [debug] [ThreadPool]: On create_spotify_creator_main: COMMIT
+[0m22:17:29.645472 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m22:17:29.645472 [debug] [ThreadPool]: On create_spotify_creator_main: Close
+[0m22:17:29.647215 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_spotify_creator_main'
+[0m22:17:29.651313 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator_main"
+[0m22:17:29.651313 [debug] [ThreadPool]: On list_spotify_creator_main: BEGIN
+[0m22:17:29.651313 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:17:29.651313 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m22:17:29.651313 [debug] [ThreadPool]: Using duckdb connection "list_spotify_creator_main"
+[0m22:17:29.651313 [debug] [ThreadPool]: On list_spotify_creator_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "connection_name": "list_spotify_creator_main"} */
+select
+      'spotify_creator' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'spotify_creator'
+  
+[0m22:17:29.660792 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m22:17:29.662879 [debug] [ThreadPool]: On list_spotify_creator_main: ROLLBACK
+[0m22:17:29.663883 [debug] [ThreadPool]: Failed to rollback 'list_spotify_creator_main'
+[0m22:17:29.663883 [debug] [ThreadPool]: On list_spotify_creator_main: Close
+[0m22:17:29.664887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DFC616D0>]}
+[0m22:17:29.664887 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:17:29.665801 [debug] [MainThread]: On master: BEGIN
+[0m22:17:29.665801 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:17:29.665801 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:17:29.666800 [debug] [MainThread]: On master: COMMIT
+[0m22:17:29.666800 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:17:29.667318 [debug] [MainThread]: On master: COMMIT
+[0m22:17:29.667318 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:17:29.668327 [debug] [MainThread]: On master: Close
+[0m22:17:29.672460 [debug] [Thread-1 (]: Began running node model.spotify_creator_growth.stg_artists
+[0m22:17:29.672460 [debug] [Thread-2 (]: Began running node model.spotify_creator_growth.stg_tracks
+[0m22:17:29.672460 [info ] [Thread-1 (]: 1 of 7 START sql view model main.stg_artists ................................... [RUN]
+[0m22:17:29.673700 [info ] [Thread-2 (]: 2 of 7 START sql view model main.stg_tracks .................................... [RUN]
+[0m22:17:29.674686 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.stg_artists'
+[0m22:17:29.675691 [debug] [Thread-2 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.stg_tracks'
+[0m22:17:29.675691 [debug] [Thread-1 (]: Began compiling node model.spotify_creator_growth.stg_artists
+[0m22:17:29.675691 [debug] [Thread-2 (]: Began compiling node model.spotify_creator_growth.stg_tracks
+[0m22:17:29.682253 [debug] [Thread-1 (]: Writing injected SQL for node "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.683253 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.685330 [debug] [Thread-2 (]: Began executing node model.spotify_creator_growth.stg_tracks
+[0m22:17:29.702287 [debug] [Thread-1 (]: Began executing node model.spotify_creator_growth.stg_artists
+[0m22:17:29.713891 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.717406 [debug] [Thread-1 (]: Writing runtime sql for node "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.718913 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.719919 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: BEGIN
+[0m22:17:29.719919 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m22:17:29.720918 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.720918 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: BEGIN
+[0m22:17:29.722147 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m22:17:29.722147 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:17:29.723158 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.723158 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_tracks"} */
+
+  
+  create view "spotify_creator"."main"."stg_tracks__dbt_tmp" as (
+    -- stg_tracks.sql
+-- Cleans and standardizes raw track data
+-- Source: Kaggle Spotify Dataset (586K tracks)
+
+with source as (
+    select * from read_csv_auto('C:/Users/ayude/spotify-creator-analytics/data/raw/tracks.csv')),
+
+cleaned as (
+    select
+        id                                              as track_id,
+        name                                            as track_name,
+        cast(popularity as integer)                     as popularity,
+        cast(duration_ms as integer)                    as duration_ms,
+        cast(duration_ms as float) / 60000.0            as duration_minutes,
+        cast(explicit as boolean)                       as is_explicit,
+        artists                                         as artists_raw,
+        id_artists                                      as artist_ids_raw,
+
+        -- Release date handling
+        try_cast(release_date as date)                  as release_date,
+        case
+            when length(release_date) = 4
+            then cast(release_date as integer)
+            else year(try_cast(release_date as date))
+        end                                             as release_year,
+
+        -- Audio features
+        cast(danceability as float)                     as danceability,
+        cast(energy as float)                           as energy,
+        cast(key as integer)                            as musical_key,
+        cast(loudness as float)                         as loudness_db,
+        cast(mode as integer)                           as mode,
+        cast(speechiness as float)                      as speechiness,
+        cast(acousticness as float)                     as acousticness,
+        cast(instrumentalness as float)                 as instrumentalness,
+        cast(liveness as float)                         as liveness,
+        cast(valence as float)                          as valence,
+        cast(tempo as float)                            as tempo_bpm,
+        cast(time_signature as integer)                 as time_signature,
+
+        -- Derived audio feature categories
+        case
+            when cast(energy as float) >= 0.7 then 'High Energy'
+            when cast(energy as float) >= 0.4 then 'Medium Energy'
+            else 'Low Energy'
+        end                                             as energy_category,
+
+        case
+            when cast(danceability as float) >= 0.7 then 'High Danceability'
+            when cast(danceability as float) >= 0.4 then 'Medium Danceability'
+            else 'Low Danceability'
+        end                                             as danceability_category,
+
+        case
+            when cast(valence as float) >= 0.6 then 'Positive/Happy'
+            when cast(valence as float) >= 0.3 then 'Neutral'
+            else 'Negative/Sad'
+        end                                             as mood_category,
+
+        case
+            when cast(acousticness as float) >= 0.6 then 'Acoustic'
+            else 'Electronic/Produced'
+        end                                             as production_style
+
+    from source
+    where id is not null
+      and name is not null
+      and cast(popularity as integer) between 0 and 100
+      and cast(danceability as float) between 0 and 1
+      and cast(energy as float) between 0 and 1
+)
+
+select * from cleaned
+where release_year >= 1950
+  and duration_minutes between 0.5 and 20  -- Filter out invalid durations
+  );
+
+[0m22:17:29.724140 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m22:17:29.724140 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.725139 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_artists"} */
+
+  
+  create view "spotify_creator"."main"."stg_artists__dbt_tmp" as (
+    -- stg_artists.sql
+-- Cleans and standardizes raw artist data
+-- Source: Kaggle Spotify Dataset (1.16M artists)
+
+with source as (
+    select * from read_csv_auto('C:/Users/ayude/spotify-creator-analytics/data/raw/artists.csv')
+),
+
+cleaned as (
+    select
+        id                                              as artist_id,
+        name                                            as artist_name,
+        cast(followers as bigint)                       as followers,
+        cast(popularity as integer)                     as popularity,
+        genres                                          as genres_raw,
+
+        -- Data quality flags
+        case
+            when followers is null then true
+            when followers < 0 then true
+            else false
+        end                                             as is_invalid_followers,
+
+        case
+            when popularity < 0 or popularity > 100 then true
+            else false
+        end                                             as is_invalid_popularity
+
+    from source
+    where id is not null
+      and name is not null
+      and name != ''
+)
+
+select * from cleaned
+where not is_invalid_followers
+  and not is_invalid_popularity
+  );
+
+[0m22:17:29.871135 [debug] [Thread-1 (]: SQL status: OK in 0.146 seconds
+[0m22:17:29.878418 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.879421 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_artists"} */
+alter view "spotify_creator"."main"."stg_artists__dbt_tmp" rename to "stg_artists"
+[0m22:17:29.882340 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m22:17:29.894088 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: COMMIT
+[0m22:17:29.895112 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.895112 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: COMMIT
+[0m22:17:29.895112 [debug] [Thread-2 (]: SQL status: OK in 0.172 seconds
+[0m22:17:29.898868 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.898868 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_tracks"} */
+alter view "spotify_creator"."main"."stg_tracks__dbt_tmp" rename to "stg_tracks"
+[0m22:17:29.899821 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:17:29.900871 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: COMMIT
+[0m22:17:29.902022 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.902022 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: COMMIT
+[0m22:17:29.903041 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m22:17:29.908610 [debug] [Thread-1 (]: Using duckdb connection "model.spotify_creator_growth.stg_artists"
+[0m22:17:29.908972 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_artists"} */
+
+      drop view if exists "spotify_creator"."main"."stg_artists__dbt_backup" cascade
+    
+[0m22:17:29.911430 [debug] [Thread-2 (]: SQL status: OK in 0.008 seconds
+[0m22:17:29.913525 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.stg_tracks"
+[0m22:17:29.914431 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.stg_tracks"} */
+
+      drop view if exists "spotify_creator"."main"."stg_tracks__dbt_backup" cascade
+    
+[0m22:17:29.914431 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m22:17:29.917964 [debug] [Thread-1 (]: On model.spotify_creator_growth.stg_artists: Close
+[0m22:17:29.919965 [debug] [Thread-2 (]: SQL status: OK in 0.005 seconds
+[0m22:17:29.921450 [debug] [Thread-2 (]: On model.spotify_creator_growth.stg_tracks: Close
+[0m22:17:29.921450 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E00C3560>]}
+[0m22:17:29.922454 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DFFF8CB0>]}
+[0m22:17:29.922454 [info ] [Thread-1 (]: 1 of 7 OK created sql view model main.stg_artists .............................. [[32mOK[0m in 0.24s]
+[0m22:17:29.924459 [debug] [Thread-1 (]: Finished running node model.spotify_creator_growth.stg_artists
+[0m22:17:29.923461 [info ] [Thread-2 (]: 2 of 7 OK created sql view model main.stg_tracks ............................... [[32mOK[0m in 0.25s]
+[0m22:17:29.925461 [debug] [Thread-2 (]: Finished running node model.spotify_creator_growth.stg_tracks
+[0m22:17:29.925461 [debug] [Thread-4 (]: Began running node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:17:29.927204 [debug] [Thread-3 (]: Began running node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:17:29.925461 [info ] [Thread-4 (]: 3 of 7 START sql view model main.int_artist_genre_classification ............... [RUN]
+[0m22:17:29.927204 [debug] [Thread-4 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.int_artist_genre_classification'
+[0m22:17:29.927204 [debug] [Thread-4 (]: Began compiling node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:17:29.927204 [info ] [Thread-3 (]: 4 of 7 START sql table model main.mart_audio_feature_trends .................... [RUN]
+[0m22:17:29.927204 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:29.927204 [debug] [Thread-3 (]: Acquiring new duckdb connection 'model.spotify_creator_growth.mart_audio_feature_trends'
+[0m22:17:29.927204 [debug] [Thread-3 (]: Began compiling node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:17:29.927204 [debug] [Thread-3 (]: Writing injected SQL for node "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:29.927204 [debug] [Thread-4 (]: Began executing node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:17:29.939231 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:29.940235 [debug] [Thread-3 (]: Began executing node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:17:29.959889 [debug] [Thread-3 (]: Writing runtime sql for node "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:29.960901 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:29.960901 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: BEGIN
+[0m22:17:29.961890 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:17:29.962805 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m22:17:29.962805 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:29.962805 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_artist_genre_classification"} */
+
+  
+  create view "spotify_creator"."main"."int_artist_genre_classification__dbt_tmp" as (
+    -- int_artist_genre_classification.sql
+-- Assigns primary genre to each artist using keyword matching
+-- This mirrors how Spotify's internal genre taxonomy works
+
+with artists as (
+    select * from "spotify_creator"."main"."stg_artists"
+),
+
+genre_classified as (
+    select
+        artist_id,
+        artist_name,
+        followers,
+        popularity,
+        genres_raw,
+
+        -- Primary genre classification via keyword matching
+        case
+            when lower(genres_raw) like '%k-pop%'
+                or lower(genres_raw) like '%korean pop%'
+                then 'K-Pop'
+            when lower(genres_raw) like '%latin%'
+                or lower(genres_raw) like '%reggaeton%'
+                or lower(genres_raw) like '%salsa%'
+                or lower(genres_raw) like '%bachata%'
+                then 'Latin'
+            when lower(genres_raw) like '%hip hop%'
+                or lower(genres_raw) like '%rap%'
+                or lower(genres_raw) like '%trap%'
+                or lower(genres_raw) like '%drill%'
+                then 'Hip-Hop'
+            when lower(genres_raw) like '%r&b%'
+                or lower(genres_raw) like '%soul%'
+                or lower(genres_raw) like '%neo soul%'
+                or lower(genres_raw) like '%contemporary r%'
+                then 'R&B'
+            when lower(genres_raw) like '%edm%'
+                or lower(genres_raw) like '%house%'
+                or lower(genres_raw) like '%techno%'
+                or lower(genres_raw) like '%electro%'
+                or lower(genres_raw) like '%electronic%'
+                or lower(genres_raw) like '%dance%'
+                then 'Electronic'
+            when lower(genres_raw) like '%country%'
+                then 'Country'
+            when lower(genres_raw) like '%classical%'
+                or lower(genres_raw) like '%orchestra%'
+                or lower(genres_raw) like '%chamber%'
+                then 'Classical'
+            when lower(genres_raw) like '%indie%'
+                or lower(genres_raw) like '%lo-fi%'
+                or lower(genres_raw) like '%bedroom pop%'
+                or lower(genres_raw) like '%alternative%'
+                then 'Indie/Alternative'
+            when lower(genres_raw) like '%rock%'
+                or lower(genres_raw) like '%metal%'
+                or lower(genres_raw) like '%punk%'
+                then 'Rock'
+            when lower(genres_raw) like '%pop%'
+                then 'Pop'
+            when genres_raw = '[]' or genres_raw is null
+                then 'Unknown'
+            else 'Other'
+        end                                             as primary_genre,
+
+        -- Follower tiers (mirrors Spotify's internal artist tiers)
+        case
+            when followers >= 10000000  then 'Superstar'      -- 10M+
+            when followers >= 1000000   then 'Major'          -- 1M-10M
+            when followers >= 100000    then 'Established'    -- 100K-1M
+            when followers >= 10000     then 'Mid-Tier'       -- 10K-100K
+            when followers >= 1000      then 'Emerging'       -- 1K-10K
+            else 'Underground'                                 -- < 1K
+        end                                             as follower_tier,
+
+        -- Popularity tiers
+        case
+            when popularity >= 80 then 'Viral'
+            when popularity >= 60 then 'Popular'
+            when popularity >= 40 then 'Moderate'
+            when popularity >= 20 then 'Niche'
+            else 'Obscure'
+        end                                             as popularity_tier
+
+    from artists
+)
+
+select * from genre_classified
+where primary_genre not in ('Unknown', 'Other')
+  );
+
+[0m22:17:29.963912 [debug] [Thread-3 (]: Using duckdb connection "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:29.964806 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: BEGIN
+[0m22:17:29.964806 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:17:29.965805 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:17:29.965805 [debug] [Thread-3 (]: Using duckdb connection "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:29.965805 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_audio_feature_trends"} */
+
+  
+    
+    
+
+    create  table
+      "spotify_creator"."main"."mart_audio_feature_trends__dbt_tmp"
+  
+    as (
+      -- mart_audio_feature_trends.sql
+-- Tracks how the "sound" of popular music has shifted over time
+-- Key insight for Music Mission: what audio signatures define creator success by era?
+
+with tracks as (
+    select * from "spotify_creator"."main"."stg_tracks"
+    where release_year between 2010 and 2021
+      and release_year is not null
+),
+
+yearly_all as (
+    select
+        release_year,
+        'All Tracks'                                    as track_segment,
+        count(*)                                        as track_count,
+        round(avg(popularity), 2)                       as avg_popularity,
+        round(avg(danceability), 3)                     as avg_danceability,
+        round(avg(energy), 3)                           as avg_energy,
+        round(avg(valence), 3)                          as avg_valence,
+        round(avg(acousticness), 3)                     as avg_acousticness,
+        round(avg(tempo_bpm), 1)                        as avg_tempo,
+        round(avg(speechiness), 3)                      as avg_speechiness,
+        round(avg(instrumentalness), 3)                 as avg_instrumentalness,
+        round(avg(duration_minutes), 2)                 as avg_duration_minutes
+    from tracks
+    group by 1
+),
+
+yearly_popular as (
+    select
+        release_year,
+        'Popular Tracks (60+)'                          as track_segment,
+        count(*)                                        as track_count,
+        round(avg(popularity), 2)                       as avg_popularity,
+        round(avg(danceability), 3)                     as avg_danceability,
+        round(avg(energy), 3)                           as avg_energy,
+        round(avg(valence), 3)                          as avg_valence,
+        round(avg(acousticness), 3)                     as avg_acousticness,
+        round(avg(tempo_bpm), 1)                        as avg_tempo,
+        round(avg(speechiness), 3)                      as avg_speechiness,
+        round(avg(instrumentalness), 3)                 as avg_instrumentalness,
+        round(avg(duration_minutes), 2)                 as avg_duration_minutes
+    from tracks
+    where popularity >= 60
+    group by 1
+)
+
+select * from yearly_all
+union all
+select * from yearly_popular
+order by release_year, track_segment
+    );
+  
+  
+[0m22:17:30.001281 [debug] [Thread-4 (]: SQL status: OK in 0.042 seconds
+[0m22:17:30.009385 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:30.010367 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_artist_genre_classification"} */
+alter view "spotify_creator"."main"."int_artist_genre_classification__dbt_tmp" rename to "int_artist_genre_classification"
+[0m22:17:30.011311 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m22:17:30.012393 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: COMMIT
+[0m22:17:30.013397 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:30.013397 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: COMMIT
+[0m22:17:30.015420 [debug] [Thread-4 (]: SQL status: OK in 0.002 seconds
+[0m22:17:30.017009 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.int_artist_genre_classification"
+[0m22:17:30.018056 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_artist_genre_classification"} */
+
+      drop view if exists "spotify_creator"."main"."int_artist_genre_classification__dbt_backup" cascade
+    
+[0m22:17:30.019018 [debug] [Thread-4 (]: SQL status: OK in 0.000 seconds
+[0m22:17:30.020102 [debug] [Thread-4 (]: On model.spotify_creator_growth.int_artist_genre_classification: Close
+[0m22:17:30.020102 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E00E8B60>]}
+[0m22:17:30.021102 [info ] [Thread-4 (]: 3 of 7 OK created sql view model main.int_artist_genre_classification .......... [[32mOK[0m in 0.09s]
+[0m22:17:30.022310 [debug] [Thread-4 (]: Finished running node model.spotify_creator_growth.int_artist_genre_classification
+[0m22:17:30.022310 [debug] [Thread-2 (]: Began running node model.spotify_creator_growth.int_creator_health_score
+[0m22:17:30.023276 [info ] [Thread-2 (]: 5 of 7 START sql view model main.int_creator_health_score ...................... [RUN]
+[0m22:17:30.023276 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.spotify_creator_growth.stg_tracks, now model.spotify_creator_growth.int_creator_health_score)
+[0m22:17:30.024260 [debug] [Thread-2 (]: Began compiling node model.spotify_creator_growth.int_creator_health_score
+[0m22:17:30.027033 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.027033 [debug] [Thread-2 (]: Began executing node model.spotify_creator_growth.int_creator_health_score
+[0m22:17:30.031583 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.031583 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.031583 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: BEGIN
+[0m22:17:30.031583 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:17:30.031583 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:17:30.031583 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.031583 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_creator_health_score"} */
+
+  
+  create view "spotify_creator"."main"."int_creator_health_score__dbt_tmp" as (
+    -- int_creator_health_score.sql
+-- Computes the Creator Health Score for each artist
+-- Based on the measurement framework in the Music Mission Analytics Spec
+--
+-- Score components (within-genre-tier normalized):
+--   popularity_score  (40%) — how popular vs peers with similar followers
+--   breakout_signal   (35%) — popularity disproportionate to follower count = trending
+--   catalog_signal    (25%) — followers as proxy for catalog depth and longevity
+
+with artists as (
+    select * from "spotify_creator"."main"."int_artist_genre_classification"
+    where followers >= 1000         -- Minimum threshold for meaningful scoring
+      and popularity >= 10          -- Filter out inactive artists
+),
+
+-- Rank within genre + follower tier peer group
+peer_ranked as (
+    select
+        *,
+        percent_rank() over (
+            partition by primary_genre, follower_tier
+            order by popularity
+        ) * 100                                         as popularity_pct_in_peer_group,
+
+        percent_rank() over (
+            partition by primary_genre
+            order by followers
+        ) * 100                                         as follower_pct_in_genre,
+
+        percent_rank() over (
+            partition by primary_genre
+            order by popularity
+        ) * 100                                         as popularity_pct_in_genre
+
+    from artists
+),
+
+scored as (
+    select
+        *,
+
+        -- Breakout signal: high popularity relative to follower count
+        -- An artist punching above their follower weight = breaking out
+        (popularity_pct_in_genre - follower_pct_in_genre)   as breakout_raw,
+
+        -- Composite creator health score
+        round(
+            popularity_pct_in_peer_group    * 0.40 +
+            greatest(0, (popularity_pct_in_genre - follower_pct_in_genre)) * 0.35 +
+            follower_pct_in_genre           * 0.25
+        , 1)                                                as creator_health_score
+
+    from peer_ranked
+),
+
+final as (
+    select
+        artist_id,
+        artist_name,
+        primary_genre,
+        follower_tier,
+        popularity_tier,
+        followers,
+        popularity,
+        popularity_pct_in_peer_group,
+        follower_pct_in_genre,
+        popularity_pct_in_genre,
+        breakout_raw                                        as breakout_signal,
+        creator_health_score,
+
+        -- Health score tier
+        case
+            when creator_health_score >= 75 then 'Breakout'
+            when creator_health_score >= 55 then 'Breaking'
+            when creator_health_score >= 35 then 'Growing'
+            else 'Plateau'
+        end                                                 as health_tier,
+
+        -- Recommended Music Mission action
+        case
+            when creator_health_score >= 75
+                then 'Editorial consideration + Marquee upsell'
+            when creator_health_score >= 55
+                then 'Discovery Mode candidate'
+            when creator_health_score >= 35
+                then 'Showcase candidate'
+            else
+                'Spotify for Artists outreach — growth tips'
+        end                                                 as recommended_action
+
+    from scored
+)
+
+select * from final
+  );
+
+[0m22:17:30.095558 [debug] [Thread-2 (]: SQL status: OK in 0.060 seconds
+[0m22:17:30.101805 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.102806 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_creator_health_score"} */
+alter view "spotify_creator"."main"."int_creator_health_score__dbt_tmp" rename to "int_creator_health_score"
+[0m22:17:30.103302 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:17:30.105430 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: COMMIT
+[0m22:17:30.105430 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.106936 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: COMMIT
+[0m22:17:30.108949 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:17:30.113949 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.int_creator_health_score"
+[0m22:17:30.114948 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.int_creator_health_score"} */
+
+      drop view if exists "spotify_creator"."main"."int_creator_health_score__dbt_backup" cascade
+    
+[0m22:17:30.115948 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:17:30.118458 [debug] [Thread-2 (]: On model.spotify_creator_growth.int_creator_health_score: Close
+[0m22:17:30.119463 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E00D6810>]}
+[0m22:17:30.121463 [info ] [Thread-2 (]: 5 of 7 OK created sql view model main.int_creator_health_score ................. [[32mOK[0m in 0.10s]
+[0m22:17:30.125158 [debug] [Thread-2 (]: Finished running node model.spotify_creator_growth.int_creator_health_score
+[0m22:17:30.127415 [debug] [Thread-4 (]: Began running node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:17:30.128411 [info ] [Thread-4 (]: 6 of 7 START sql table model main.mart_artist_growth_tiers ..................... [RUN]
+[0m22:17:30.134427 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.spotify_creator_growth.int_artist_genre_classification, now model.spotify_creator_growth.mart_artist_growth_tiers)
+[0m22:17:30.134427 [debug] [Thread-4 (]: Began compiling node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:17:30.143168 [debug] [Thread-4 (]: Writing injected SQL for node "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:30.145167 [debug] [Thread-4 (]: Began executing node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:17:30.152930 [debug] [Thread-4 (]: Writing runtime sql for node "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:30.154936 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:30.156614 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: BEGIN
+[0m22:17:30.156614 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m22:17:30.158619 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m22:17:30.159623 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:30.160623 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_artist_growth_tiers"} */
+
+  
+    
+    
+
+    create  table
+      "spotify_creator"."main"."mart_artist_growth_tiers__dbt_tmp"
+  
+    as (
+      -- mart_artist_growth_tiers.sql
+-- Final mart: artist-level creator health scores
+-- Designed for self-service analytics by Music Mission product teams
+
+with health_scores as (
+    select * from "spotify_creator"."main"."int_creator_health_score"
+),
+
+final as (
+    select
+        artist_id,
+        artist_name,
+        primary_genre,
+        follower_tier,
+        popularity_tier,
+        health_tier,
+        followers,
+        popularity,
+        round(creator_health_score, 1)                  as creator_health_score,
+        round(breakout_signal, 1)                       as breakout_signal,
+        round(popularity_pct_in_peer_group, 1)          as popularity_pct_in_peer_group,
+        round(follower_pct_in_genre, 1)                 as follower_pct_in_genre,
+        round(popularity_pct_in_genre, 1)               as popularity_pct_in_genre,
+        recommended_action,
+
+        -- Flags for product team filtering
+        case when health_tier = 'Breakout' then true else false end  as is_breakout,
+        case when follower_tier = 'Emerging'
+             and health_tier in ('Breakout', 'Breaking')
+             then true else false end                   as is_emerging_breakout,
+        case when follower_tier in ('Underground', 'Emerging')
+             and popularity_tier in ('Viral', 'Popular')
+             then true else false end                   as is_hidden_gem
+
+    from health_scores
+)
+
+select * from final
+order by creator_health_score desc
+    );
+  
+  
+[0m22:17:30.433371 [debug] [Thread-3 (]: SQL status: OK in 0.466 seconds
+[0m22:17:30.442133 [debug] [Thread-3 (]: Using duckdb connection "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:30.444133 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_audio_feature_trends"} */
+alter table "spotify_creator"."main"."mart_audio_feature_trends__dbt_tmp" rename to "mart_audio_feature_trends"
+[0m22:17:30.452931 [debug] [Thread-3 (]: SQL status: OK in 0.009 seconds
+[0m22:17:30.466958 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: COMMIT
+[0m22:17:30.467958 [debug] [Thread-3 (]: Using duckdb connection "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:30.468964 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: COMMIT
+[0m22:17:30.473162 [debug] [Thread-3 (]: SQL status: OK in 0.003 seconds
+[0m22:17:30.482860 [debug] [Thread-3 (]: Using duckdb connection "model.spotify_creator_growth.mart_audio_feature_trends"
+[0m22:17:30.483861 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_audio_feature_trends"} */
+
+      drop table if exists "spotify_creator"."main"."mart_audio_feature_trends__dbt_backup" cascade
+    
+[0m22:17:30.485860 [debug] [Thread-3 (]: SQL status: OK in 0.001 seconds
+[0m22:17:30.489377 [debug] [Thread-3 (]: On model.spotify_creator_growth.mart_audio_feature_trends: Close
+[0m22:17:30.490377 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E0128200>]}
+[0m22:17:30.492378 [info ] [Thread-3 (]: 4 of 7 OK created sql table model main.mart_audio_feature_trends ............... [[32mOK[0m in 0.56s]
+[0m22:17:30.499221 [debug] [Thread-3 (]: Finished running node model.spotify_creator_growth.mart_audio_feature_trends
+[0m22:17:32.103051 [debug] [Thread-4 (]: SQL status: OK in 1.942 seconds
+[0m22:17:32.108662 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:32.108662 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_artist_growth_tiers"} */
+alter table "spotify_creator"."main"."mart_artist_growth_tiers__dbt_tmp" rename to "mart_artist_growth_tiers"
+[0m22:17:32.110678 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m22:17:32.112683 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: COMMIT
+[0m22:17:32.113702 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:32.113702 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: COMMIT
+[0m22:17:32.189038 [debug] [Thread-4 (]: SQL status: OK in 0.074 seconds
+[0m22:17:32.192883 [debug] [Thread-4 (]: Using duckdb connection "model.spotify_creator_growth.mart_artist_growth_tiers"
+[0m22:17:32.193882 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_artist_growth_tiers"} */
+
+      drop table if exists "spotify_creator"."main"."mart_artist_growth_tiers__dbt_backup" cascade
+    
+[0m22:17:32.194873 [debug] [Thread-4 (]: SQL status: OK in 0.001 seconds
+[0m22:17:32.197146 [debug] [Thread-4 (]: On model.spotify_creator_growth.mart_artist_growth_tiers: Close
+[0m22:17:32.197146 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E011F1D0>]}
+[0m22:17:32.198185 [info ] [Thread-4 (]: 6 of 7 OK created sql table model main.mart_artist_growth_tiers ................ [[32mOK[0m in 2.06s]
+[0m22:17:32.200191 [debug] [Thread-4 (]: Finished running node model.spotify_creator_growth.mart_artist_growth_tiers
+[0m22:17:32.201613 [debug] [Thread-2 (]: Began running node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:17:32.202616 [info ] [Thread-2 (]: 7 of 7 START sql table model main.mart_genre_breakout_signals .................. [RUN]
+[0m22:17:32.203619 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.spotify_creator_growth.int_creator_health_score, now model.spotify_creator_growth.mart_genre_breakout_signals)
+[0m22:17:32.203619 [debug] [Thread-2 (]: Began compiling node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:17:32.210015 [debug] [Thread-2 (]: Writing injected SQL for node "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.212010 [debug] [Thread-2 (]: Began executing node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:17:32.218552 [debug] [Thread-2 (]: Writing runtime sql for node "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.221852 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.222867 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: BEGIN
+[0m22:17:32.223877 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:17:32.224874 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:17:32.225893 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.226883 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_genre_breakout_signals"} */
+
+  
+    
+    
+
+    create  table
+      "spotify_creator"."main"."mart_genre_breakout_signals__dbt_tmp"
+  
+    as (
+      -- mart_genre_breakout_signals.sql
+-- Genre-level aggregation of creator health metrics
+-- Answers: which genres are producing the most breakout artists right now?
+
+with artists as (
+    select * from "spotify_creator"."main"."mart_artist_growth_tiers"
+),
+
+genre_summary as (
+    select
+        primary_genre,
+
+        -- Volume
+        count(*)                                        as total_artists,
+        count(case when health_tier = 'Breakout'
+            then 1 end)                                 as breakout_artists,
+        count(case when health_tier = 'Breaking'
+            then 1 end)                                 as breaking_artists,
+        count(case when is_emerging_breakout
+            then 1 end)                                 as emerging_breakout_artists,
+        count(case when is_hidden_gem
+            then 1 end)                                 as hidden_gems,
+
+        -- Health metrics
+        round(avg(creator_health_score), 1)             as avg_health_score,
+        round(avg(breakout_signal), 1)                  as avg_breakout_signal,
+        round(avg(popularity), 1)                       as avg_popularity,
+        round(avg(followers), 0)                        as avg_followers,
+        round(median(followers), 0)                     as median_followers,
+
+        -- Rates
+        round(count(case when health_tier = 'Breakout'
+            then 1 end) * 100.0 / count(*), 2)         as breakout_rate_pct,
+        round(count(case when is_hidden_gem
+            then 1 end) * 100.0 / count(*), 2)         as hidden_gem_rate_pct,
+
+        -- Follower distribution
+        count(case when follower_tier = 'Superstar'     then 1 end) as superstar_count,
+        count(case when follower_tier = 'Major'         then 1 end) as major_count,
+        count(case when follower_tier = 'Established'   then 1 end) as established_count,
+        count(case when follower_tier = 'Mid-Tier'      then 1 end) as mid_tier_count,
+        count(case when follower_tier = 'Emerging'      then 1 end) as emerging_count
+
+    from artists
+    group by 1
+)
+
+select
+    *,
+    -- Middle class proxy: artists in Mid-Tier + Established tiers
+    round((mid_tier_count + established_count) * 100.0 / total_artists, 1)
+        as middle_class_pct
+from genre_summary
+order by breakout_rate_pct desc
+    );
+  
+  
+[0m22:17:32.260546 [debug] [Thread-2 (]: SQL status: OK in 0.033 seconds
+[0m22:17:32.264570 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.265541 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_genre_breakout_signals"} */
+alter table "spotify_creator"."main"."mart_genre_breakout_signals__dbt_tmp" rename to "mart_genre_breakout_signals"
+[0m22:17:32.267059 [debug] [Thread-2 (]: SQL status: OK in 0.001 seconds
+[0m22:17:32.269084 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: COMMIT
+[0m22:17:32.269084 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.270085 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: COMMIT
+[0m22:17:32.272342 [debug] [Thread-2 (]: SQL status: OK in 0.002 seconds
+[0m22:17:32.275328 [debug] [Thread-2 (]: Using duckdb connection "model.spotify_creator_growth.mart_genre_breakout_signals"
+[0m22:17:32.278127 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "spotify_creator_growth", "target_name": "dev", "node_id": "model.spotify_creator_growth.mart_genre_breakout_signals"} */
+
+      drop table if exists "spotify_creator"."main"."mart_genre_breakout_signals__dbt_backup" cascade
+    
+[0m22:17:32.279115 [debug] [Thread-2 (]: SQL status: OK in 0.000 seconds
+[0m22:17:32.280128 [debug] [Thread-2 (]: On model.spotify_creator_growth.mart_genre_breakout_signals: Close
+[0m22:17:32.281128 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a6725e68-8cec-4449-a593-d1b01ffc4b33', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186E012AFF0>]}
+[0m22:17:32.282133 [info ] [Thread-2 (]: 7 of 7 OK created sql table model main.mart_genre_breakout_signals ............. [[32mOK[0m in 0.08s]
+[0m22:17:32.283105 [debug] [Thread-2 (]: Finished running node model.spotify_creator_growth.mart_genre_breakout_signals
+[0m22:17:32.285109 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:17:32.285109 [debug] [MainThread]: On master: BEGIN
+[0m22:17:32.286644 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:17:32.287655 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m22:17:32.287655 [debug] [MainThread]: On master: COMMIT
+[0m22:17:32.287655 [debug] [MainThread]: Using duckdb connection "master"
+[0m22:17:32.288849 [debug] [MainThread]: On master: COMMIT
+[0m22:17:32.289875 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m22:17:32.289875 [debug] [MainThread]: On master: Close
+[0m22:17:32.290904 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:17:32.290904 [debug] [MainThread]: Connection 'create_spotify_creator_main' was properly closed.
+[0m22:17:32.291878 [debug] [MainThread]: Connection 'list_spotify_creator_main' was properly closed.
+[0m22:17:32.291878 [debug] [MainThread]: Connection 'model.spotify_creator_growth.stg_artists' was properly closed.
+[0m22:17:32.291878 [debug] [MainThread]: Connection 'model.spotify_creator_growth.mart_genre_breakout_signals' was properly closed.
+[0m22:17:32.292896 [debug] [MainThread]: Connection 'model.spotify_creator_growth.mart_artist_growth_tiers' was properly closed.
+[0m22:17:32.292896 [debug] [MainThread]: Connection 'model.spotify_creator_growth.mart_audio_feature_trends' was properly closed.
+[0m22:17:32.293895 [info ] [MainThread]: 
+[0m22:17:32.294876 [info ] [MainThread]: Finished running 3 table models, 4 view models in 0 hours 0 minutes and 2.83 seconds (2.83s).
+[0m22:17:32.296836 [debug] [MainThread]: Command end result
+[0m22:17:32.339225 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\manifest.json
+[0m22:17:32.344313 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\semantic_manifest.json
+[0m22:17:32.364035 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\ayude\spotify-creator-analytics\dbt_project\target\run_results.json
+[0m22:17:32.365025 [info ] [MainThread]: 
+[0m22:17:32.366552 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:17:32.368592 [info ] [MainThread]: 
+[0m22:17:32.369582 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m22:17:32.370576 [debug] [MainThread]: Command `dbt run` succeeded at 22:17:32.370576 after 4.35 seconds
+[0m22:17:32.371862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DA3E7950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DD8B96A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000186DD8BBFB0>]}
+[0m22:17:32.372849 [debug] [MainThread]: Flushing usage events
+[0m22:17:33.219237 [debug] [MainThread]: An error was encountered while trying to flush usage events

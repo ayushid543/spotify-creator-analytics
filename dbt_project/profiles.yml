@@ -1,0 +1,7 @@
+spotify_creator_growth:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "../data/spotify_creator.duckdb"
+      threads: 4
